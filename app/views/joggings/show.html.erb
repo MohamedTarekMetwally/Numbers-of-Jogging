@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @jogging %>
+
+<div>
+  <%= link_to "Edit this jogging", edit_jogging_path(@jogging) %> |
+  <%= link_to "Back to joggings", joggings_path %>
+
+  <%= button_to "Destroy this jogging", @jogging, method: :delete %>
+</div>

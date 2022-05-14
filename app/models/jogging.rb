@@ -1,0 +1,2 @@
+class Jogging < ApplicationRecord
+end

@@ -2,12 +2,16 @@
 
 <% if current_user %>
 
+
     <p>Hello
         <%=current_user.email%>!</p>
     <p>Your position is a   <%=current_user.role%></p>
     <p>
         You are authonticated
     </p>
+    
+
+
     <%=link_to "Sign out", destroy_user_session_path, 'data-turbo-method': :delete%>
     
     
@@ -16,6 +20,6 @@
     <%end%>
     <%else%>
         <p>you are not signed in</p>
-        <%=link_to "Sign Up!", new_user_registration_path %>
+        <%=link_to "Sign Up!",   %>
             <%= link_to "Sign in!",new_user_session_path %>
-                <%end%>
+    <%end%>
