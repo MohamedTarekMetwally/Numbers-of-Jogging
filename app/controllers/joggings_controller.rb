@@ -65,6 +65,6 @@ class JoggingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def jogging_params
-      params.require(:jogging).permit(:date, :distance, :time)
+      params.require(:jogging).permit(:date, :distance, :time, :user_id)
     end
 end

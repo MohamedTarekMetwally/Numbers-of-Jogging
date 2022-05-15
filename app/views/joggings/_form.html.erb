@@ -13,18 +13,25 @@
 
   <div>
     <%= form.label :date, style: "display: block" %>
-    <%= form.text_field :date %>
+    <%= form.text_field :date,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :distance, style: "display: block" %>
-    <%= form.number_field :distance %>
+    <%= form.number_field :distance,class:"form-control" %>
   </div>
 
   <div>
     <%= form.label :time, style: "display: block" %>
-    <%= form.number_field :time %>
+    <%= form.number_field :time,class:"form-control" %>
   </div>
+
+  <div>
+    <%= form.number_field :user_id,id: :joggings_user_id, class:"form-control",value:current_user.id,type: :hidden %>
+  </div>
+
+  </br>
+
 
   <div>
     <%= form.submit %>

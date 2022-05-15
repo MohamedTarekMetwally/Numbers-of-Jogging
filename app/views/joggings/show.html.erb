@@ -3,8 +3,8 @@
 <%= render @jogging %>
 
 <div>
-  <%= link_to "Edit this jogging", edit_jogging_path(@jogging) %> |
-  <%= link_to "Back to joggings", joggings_path %>
+  <%= link_to "Edit this jogging", edit_jogging_path(@jogging), class:"btn btn-secondary" %> 
+  <%= link_to "Back to joggings", joggings_path ,class:"btn btn-secondary"%>
 
-  <%= button_to "Destroy this jogging", @jogging, method: :delete %>
+  <%= button_to "Destroy this jogging", @jogging, method: :delete ,class:"btn btn-secondary"%>
 </div>
