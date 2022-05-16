@@ -1,6 +1,7 @@
 class JoggingsController < ApplicationController
   before_action :set_jogging, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except:[:index, :show]
+  #before_action :correct_user || pirority_user ,only: [:edit, :update, :destroy]
 
   # GET /joggings or /joggings.json
   def index
@@ -14,6 +15,7 @@ class JoggingsController < ApplicationController
   # GET /joggings/new
   def new
     @jogging = Jogging.new
+    #@jogging = current_user.Jogging.build
   end
 
   # GET /joggings/1/edit
@@ -23,6 +25,7 @@ class JoggingsController < ApplicationController
   # POST /joggings or /joggings.json
   def create
     @jogging = Jogging.new(jogging_params)
+    #@jogging = current_user.Jogging.build(jogging_params)
 
     respond_to do |format|
       if @jogging.save
@@ -58,6 +61,18 @@ class JoggingsController < ApplicationController
     end
   end
 
+
+  #def correct_user
+    #@jogging = current_user.Jogging.find_by(id: params[:id])
+    ##@jog = current_user.role.find_by(id: params[:position])
+   # redirect_to  joggings_path, notice: "Not authorized to edit this Jogging" if @jogging.nil?
+  #end
+
+  #def pirority_user
+   # @jogging = current_user.role
+  #  redirect_to joggings_path, notice: "Not authorized" if @jogging <2
+  #end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_jogging
@@ -68,4 +83,18 @@ class JoggingsController < ApplicationController
     def jogging_params
       params.require(:jogging).permit(:date, :distance, :time, :user_id)
     end
+end
+
+def index
+  @date_method = (params[:search].present? ? params[:search][:date_method] : 'indate').to_sym
+  @start = selected_date(:start_date)
+  @end = selected_date(:end_date)
+
+  @jogging = params[:search].present? ? jogging.where(@date_method => @start..@end) : Jogging.none
+end
+
+private
+
+def selected_date(symbol)
+  params[:search].present? && params[:search][symbol].present? ? params[:search][symbol].to_date : Time.now.to_date
 end
