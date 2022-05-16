@@ -1,5 +1,6 @@
 class JoggingsController < ApplicationController
   before_action :set_jogging, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except:[:index, :show]
 
   # GET /joggings or /joggings.json
   def index

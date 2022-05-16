@@ -11,14 +11,14 @@
         <li class="nav-item">
           <%= link_to 'About us', home_about_path, class:"nav-link"%>
         </li>
-    <%if current_user%>
+    <%#if current_user.admin%>
         <li class="nav-item">
           <%= link_to 'Joggings document', joggings_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to 'Add Jogging', new_jogging_path, class:"nav-link"%>
         </li>
-    <%end%>
+    <%#end%>
         
       </ul>
       

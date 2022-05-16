@@ -6,19 +6,39 @@
       <th>Date</th>
       <th>Distance</th>
       <th>Time</th>
+      <th>User Id</th>
     </tr>
   </thead>
 
   <tbody>
+
+
+    <%if  current_user && current_user.admin?%>
       <% @joggings.each do |jogging| %>
       <tr>
         <td><%=jogging.date%></td>
         <td><%=jogging.distance%></td>
-        <td><%=jogging.time%></td>
-          <td><%= link_to 'Delete', jogging, method: :delete, data: { confirm: 'Are you sure?'}, class:"btn btn-outline-danger btn-sm" %></td> 
-          <td><%= link_to "Show this jogging", jogging %></td>
+        <td><%=jogging.time%></td>   
+        <td><%=jogging.user_id%></td>
+        <td><%= link_to "Show this jogging", jogging %></td>
+      <%end%>
       </tr>
-      <% end %> 
+    <%else%>
+      <% @joggings.each do |jogging| %>
+      <tr>
+        <td><%=jogging.date%></td>
+        <td><%=jogging.distance%></td>
+        <td><%=jogging.time%></td>   
+        <td><%=jogging.user_id%></td>
+        <%if jogging.user == current_user%>
+        <td><%= link_to "Show this jogging", jogging %></td>
+        <%end%>
+      </tr>
+      <%end%>
+    <%end%>
+
+
+
     
   </tbody>
 </table>
