@@ -42,6 +42,20 @@ Note: you will find the commands down below.
 ## Commands to upgrade or downgrade a user
 > as told before the user will be upgraded only through the terminal for now so here is some command lines to change the role.
 
+>this command is just to open the cmd of rails
 ```bash
  rails c
+```
+
+> here we are accessing the User throug the **enum** we made in the **user.rb**. 
+```bash
+@user = User.first
+```
+> we can change 1 to make it 2 according the role i want here after the upgcoming command the role will be moderator (manager).
+```bash
+@user.role = 1
+```
+> here to save it and update it in our database.
+```bash
+@user.save
 ```
