@@ -13,8 +13,12 @@ You can choose your own type while logging in, But for now in the server the def
 
 
 
-> **To Control** the accessing of the users in the server, there was **two theroies** of implementation.
-> I used the two in my Code. But I am commenting one of them.
+## > **To Control** the accessing of the users in the server, there was **two theroies** of implementation.
+## > I used the two in my Code. But I am commenting one of them.
+
+## > **The First one** : is to remove the edit, delete from the document if it's not your document (if you are a user ), and actually it worked very very good at first but after doing some research i found out it can be easly tracked if you bruteforced through the URL.
+
+## > **The Second one** : is to add it in the controller and add before action for the correct user or what type of user i want. But i had a problem in this theory which is it actually works very good but it blocks any person from acessing any other person. So It didn't work in the best way, but i am currently working to find a solution for it as soon as possible.
 
 
 
