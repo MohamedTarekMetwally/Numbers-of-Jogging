@@ -38,3 +38,10 @@ Note: you will find the commands down below.
 
 ### The admin as you can see can access all the Documents in the server.
 ![fsgg](https://user-images.githubusercontent.com/51732423/168706907-70a5025a-09bb-499c-8cbd-8c549f753b9c.PNG)
+
+## Commands to upgrade or downgrade a user
+> as told before the user will be upgraded only through the terminal for now so here is some command lines to change the role.
+
+```bash
+ rails c
+```
