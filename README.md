@@ -12,6 +12,7 @@ We have **three** types of users in the app.
 You can choose your own type while logging in, But for now in the server the default is all the accounts are users but you can upgrade any account to moderator or admin through the rails command line.
 
 
+## Theories of implementation.
 
  > **To Control** the accessing of the users in the server, there was **two theroies** of implementation.
  > I used the two in my Code. But I am commenting one of them.
