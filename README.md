@@ -25,16 +25,16 @@ You can choose your own type while logging in, But for now in the server the def
 
 Note: you will find the commands down below.
 
-## Here is a sample of the GUI of the Project.
+### Here is a sample of the GUI of the Project.
 
-## Here is a sample of a user model after logging in.
+### Here is a sample of a user model after logging in.
 ![Capture](https://user-images.githubusercontent.com/51732423/168706625-3c7d63c4-4995-413d-8493-7101c0970e0f.PNG)
 
-## The users can access his own Joggings but can see the other documents.
+### The users can access his own Joggings but can see the other documents.
 ![cap](https://user-images.githubusercontent.com/51732423/168706745-191c7fa3-010e-49da-a209-e82ad3cbf4a5.PNG)
 
-## Here is a sample of an Admin model after logging in
+### Here is a sample of an Admin model after logging in
 ![ggs](https://user-images.githubusercontent.com/51732423/168706869-4c14599b-50d0-4677-8bf9-5f37d9a07b2d.PNG)
 
-## The admin as you can see can access all the Documents in the server.
+### The admin as you can see can access all the Documents in the server.
 ![fsgg](https://user-images.githubusercontent.com/51732423/168706907-70a5025a-09bb-499c-8cbd-8c549f753b9c.PNG)
